@@ -1,6 +1,6 @@
 baseURL = "http://example.com" # The URL of your site
 languageCode = "en-gb" # The language you want to display the site in
-title = "Sam Robbins" # The title you want to appear in the address bar
+title = "Sajad Hayatlou" # The title you want to appear in the address bar
 theme = "hugo-developer-portfolio" # The theme, don't change this
 
 
@@ -18,32 +18,33 @@ theme = "hugo-developer-portfolio" # The theme, don't change this
 # navigation
 [menu]
   [[menu.main]]
-  name = "About"
-  URL = "about"
-  [[menu.main]]
   name = "Blog"
   URL = "blog"
   [[menu.main]]
-  name = "Portfolio"
-  URL = "portfolio"
-  [[menu.main]]
-  name = "Contact"
-  URL = "contact"
+  name = "About"
+  URL = "about"
+
+ # [[menu.main]]
+ # name = "Portfolio"
+ # URL = "portfolio"
+ # [[menu.main]]
+ # name = "Contact"
+ # URL = "contact"
 
 [params]
 home = "Home" # What you want the homepage to show up as in the menu bar
 # Meta data
-description = "The website of Sam Robbins, 2nd Year Computer Science Student at Durham University"
-author = "Sam Robbins"
+description = "The website of Sajad Hayatlou, Java Developer"
+author = "Sajad Hayatlou"
 
 
   [params.contact]
   formAction = "https://formspree.io/<Insert code>" # Add your formspree URL here to get emails
 
-  # This contains the contact information for the footer
+  # This contains the contact information for the footer 
   [params.footer]
-  email = "samrobbinsgb@gmail.com"
-  address = "Durham, UK"
+  email = "sajjad.htlo@gmail.com"
+  address = "Tehran, Iran"
   googlemaps = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U"
 
 

@@ -22,14 +22,10 @@ skill:
   item:
     - title: Java
       logo: https://ih1.redbubble.net/image.938933220.7140/flat,128x128,075,f-pad,128x128,f8f8f8.jpg
-      description: I'm god of Java
     - title: Spring
       logo: https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png
-      description: I'm god of spring
     - title: Hibernate
       logo: https://hibernate.org/images/hibernate_icon_whitebkg.svg
-      description: I'm god of hibernate
-
 
 portfolio:
   enable: true
@@ -49,15 +45,15 @@ experience:
     - logo: https://media-exp1.licdn.com/dms/image/C510BAQGQCNUy_Yr5Cg/company-logo_200_200/0/1519872533928?e=1616025600&v=beta&t=kJLyVit2s_w7RNYuUATXIxaHOkullna9Qm1SoEmyq4s
       title: Java developer
       company: Taramesh Holding
-      duration: November 2016
-    - logo: https://jobinja.ir/files/uploads/images/9d12d794-fd4c-11e8-9103-d6b790452c1a_6b343cb4-d037-4117-beba-f6f21fb579fe/companies_logo_300xauto.png
+      duration: Jul 2015
+    - logo: https://media-exp1.licdn.com/dms/image/C510BAQGQCNUy_Yr5Cg/company-logo_200_200/0/1519872533928?e=1616025600&v=beta&t=kJLyVit2s_w7RNYuUATXIxaHOkullna9Qm1SoEmyq4s
       title: Python web developer
       company: INB company
-      duration: November 2017
+      duration: Aug 2016
     - logo: https://quera.ir/media/public/careers/logos/8a5ceb413ef24545bd4f87b3683fe7a4.png
       title: Java Developer
       company: Hamim company
-      duration: Since November 2018
+      duration: Since May 2017
 
 
 

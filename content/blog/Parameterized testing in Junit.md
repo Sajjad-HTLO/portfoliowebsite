@@ -1,11 +1,10 @@
 ---
-title: "About Junit"
-date: 2019-12-31T12:14:34+06:00
-description: "About Junit"
+title: "Parameterized tests in Junit 4"
+date: 2020-08-12T12:14:34+06:00
+description: "How to write Parameterized tests in Junit4"
 author: "Sajad Hayatlou"
 type: "post"
 ---
-
 
 Thanks to `Junit` 4’s Parameterize testing, parameterized tests make it possible to run a test multiple times with different arguments.The source of parameters can be a method, or simple self declared variables:
 
@@ -58,7 +57,7 @@ public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();
 public final SpringMethodRule springMethodRule = new SpringMethodRule();
 {{< /highlight >}}
 
-### Summary:
+### Summary
 
 In this short post we see how to use JUnit 4 for parameterized tests.
 

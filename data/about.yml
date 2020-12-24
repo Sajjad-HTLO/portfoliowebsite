@@ -1,7 +1,15 @@
 leadership:
   enable: true
   item:
-    - logo: https://res.cloudinary.com/samrobbins/image/upload/f_auto,q_auto/v1591793280/logos/logos_yl_qozav6.webp
-      title: Hamim Company
-      company: The Scout Association
-      duration: September 2014 - July 2018
+    - logo: https://media-exp1.licdn.com/dms/image/C510BAQGQCNUy_Yr5Cg/company-logo_200_200/0/1519872533928?e=1616025600&v=beta&t=kJLyVit2s_w7RNYuUATXIxaHOkullna9Qm1SoEmyq4s
+      title: Teamwork
+      company: The Taramesh Holding
+      duration: Jul 2015 - Aug 2016
+    - logo: https://media-exp1.licdn.com/dms/image/C510BAQGQCNUy_Yr5Cg/company-logo_200_200/0/1519872533928?e=1616025600&v=beta&t=kJLyVit2s_w7RNYuUATXIxaHOkullna9Qm1SoEmyq4s
+      title: Teamwork
+      company: The INB
+      duration: Aug 2016 - May 2017
+    - logo: https://quera.ir/media/public/careers/logos/8a5ceb413ef24545bd4f87b3683fe7a4.png
+      title: Teamwork
+      company: The Hamim Company
+      duration: May 2017 - present

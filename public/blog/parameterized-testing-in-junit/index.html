@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Sajad Hayatlou</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="How to write Parameterized tests in Junit4">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Sajad Hayatlou">
+  <meta name="generator" content="Hugo 0.79.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="http://example.com"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Parameterized tests in Junit 4</h1>
+    <p class="uk-text-center uk-text-lead">How to write Parameterized tests in Junit4</p>
+    <p class="uk-text-center">Published on Aug 12, 2020</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>Thanks to <code>Junit</code> 4’s Parameterize testing, parameterized tests make it possible to run a test multiple times with different arguments.The source of parameters can be a method, or simple self declared variables:</p>
+<p>First of all, we should declare that our test suit is going to be lunched with ​<code>JUnitParamsRunner</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>JUnitParamsRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTests</span> <span style="color:#f92672">{</span></code></pre></div>
+<p>This test’s parameters are self declared variables:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span>
+<span style="color:#a6e22e">@Parameters</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">})</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testWithValueSource</span><span style="color:#f92672">(</span>String argument<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    assertNotNull<span style="color:#f92672">(</span>argument<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>Using a method as the source of parameters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span>
+<span style="color:#a6e22e">@Parameters</span><span style="color:#f92672">(</span>method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;provideStringParameters&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testWithValueSource</span><span style="color:#f92672">(</span>String argument<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    assertNotNull<span style="color:#f92672">(</span>argument<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">private</span> String<span style="color:#f92672">[]</span> <span style="color:#a6e22e">provideStringParameters</span><span style="color:#f92672">(){</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]{</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">};</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<p>But, if you want to have a <code>TestConfiguration</code> in your test suit, and defining some <code>Bean</code> there (for example, a service object bean) Dependency injecttion will be omitted in case of using <code>JUnitParamsRunner</code> , and the solution is to add this <code>Rules</code> to your test suit:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * These JUnit 4 rules, introduced in Spring 4.2, have the advantage of being independent of
+</span><span style="color:#75715e"> * any {@link org.junit.runner.Runner} implementation and can therefore be combined with existing
+</span><span style="color:#75715e"> * alternative runners like the one used in the this test class, {@link JUnitParamsRunner}.
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @see &lt;a href=&#34;http://bit.ly/2tkzggJ&#34;&gt;Spring JUnit 4 Rules&lt;/a&gt;
+</span><span style="color:#75715e"> */</span>
+<span style="color:#a6e22e">@ClassRule</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> SpringClassRule SPRING_CLASS_RULE <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpringClassRule<span style="color:#f92672">();</span>
+
+<span style="color:#a6e22e">@Rule</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> SpringMethodRule springMethodRule <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpringMethodRule<span style="color:#f92672">();</span></code></pre></div>
+<h3 id="summary">Summary</h3>
+<p>In this short post we see how to use JUnit 4 for parameterized tests.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:sajjad.htlo@gmail.com">sajjad.htlo@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+                  <div uk-lightbox>
+                    <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Tehran, Iran"
+                      data-type="iframe">Tehran, Iran</a>
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+    <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+    <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+    2020
+    Sajad Hayatlou
+
+
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

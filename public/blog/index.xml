@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Sajad Hayatlou</title>
+    <link>http://example.com/blog/</link>
+    <description>Recent content in Blog on Sajad Hayatlou</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="http://example.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to avoid CI in Spring</title>
+      <link>http://example.com/blog/spring-circular-dependency/</link>
+      <pubDate>Sat, 12 Sep 2020 12:14:34 +0600</pubDate>
+      
+      <guid>http://example.com/blog/spring-circular-dependency/</guid>
+      <description>1.Definition of a bean Bean is a key concept of the Spring Framework. As such, understanding this notion is crucial to get the hang of the framework and to use it in an effective way.
+Here&amp;rsquo;s a definition of beans in the Spring Framework documentation:
+ I In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</description>
+    </item>
+    
+    <item>
+      <title>Hibernate Annotations</title>
+      <link>http://example.com/blog/orphan-removal/</link>
+      <pubDate>Sun, 06 Sep 2020 17:14:35 +0600</pubDate>
+      
+      <guid>http://example.com/blog/orphan-removal/</guid>
+      <description>There is two different concepts in defining relation attributes:
+The orphanRemoval is an entirely ORM-specific thing. It marks child entity (original record) to be removed when it’s no longer referenced from the parent entity, e.g. when you remove the child entity from the corresponding collection of the parent entity.
+But in other side, the ON DELETE CASCADE is a database-specific thing, it deletes the child row in the database when the parent row is deleted.</description>
+    </item>
+    
+    <item>
+      <title>Parameterized tests in Junit 4</title>
+      <link>http://example.com/blog/parameterized-testing-in-junit/</link>
+      <pubDate>Wed, 12 Aug 2020 12:14:34 +0600</pubDate>
+      
+      <guid>http://example.com/blog/parameterized-testing-in-junit/</guid>
+      <description>Thanks to Junit 4’s Parameterize testing, parameterized tests make it possible to run a test multiple times with different arguments.The source of parameters can be a method, or simple self declared variables:
+First of all, we should declare that our test suit is going to be lunched with ​JUnitParamsRunner:
+@RunWith(JUnitParamsRunner.class) public class MyTests { This test’s parameters are self declared variables:
+@Test @Parameters(value = {&amp;#34;foo&amp;#34;,&amp;#34;bar&amp;#34;}) void testWithValueSource(String argument) { assertNotNull(argument); } Using a method as the source of parameters:</description>
+    </item>
+    
+    <item>
+      <title>Maven Build Lifecycles</title>
+      <link>http://example.com/blog/maven-build-lifecycles/</link>
+      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
+      
+      <guid>http://example.com/blog/maven-build-lifecycles/</guid>
+      <description>A Build Lifecycle is Made Up of Phases
+  Each of these build lifecycles is defined by a different list of build phases, wherein a build phase represents a stage in the lifecycle.
+For example, the default lifecycle comprises of the following phases (for a complete list of the lifecycle phases, refer to the Lifecycle Reference):
+ validate – validate the project is correct and all necessary information is available compile – compile the source code of the project test – test the compiled source code using a suitable unit testing framework.</description>
+    </item>
+    
+  </channel>
+</rss>

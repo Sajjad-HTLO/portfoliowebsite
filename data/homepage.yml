@@ -28,7 +28,7 @@ skill:
       logo: https://hibernate.org/images/hibernate_icon_whitebkg.svg
 
 portfolio:
-  enable: true
+  enable: false
   item:
     - title: Intelligent Trip Plan Recommender system
       image: https://image.slidesharecdn.com/isslpresentationfirstinitiation-170403145518/95/intelligent-system-scripting-language-conceptual-presentation-1-638.jpg

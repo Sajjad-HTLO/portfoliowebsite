@@ -15,7 +15,8 @@
       <guid>http://example.com/blog/spring-circular-dependency/</guid>
       <description>1.Definition of a bean Bean is a key concept of the Spring Framework. As such, understanding this notion is crucial to get the hang of the framework and to use it in an effective way.
 Here&amp;rsquo;s a definition of beans in the Spring Framework documentation:
- I In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</description>
+&amp;lt; quotate &amp;gt;
+In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans.</description>
     </item>
     
     <item>

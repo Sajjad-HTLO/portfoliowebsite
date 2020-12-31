@@ -18,14 +18,16 @@ about:
     URL: "/about"
 
 skill:
-  enable: true
+  enable: true 
   item:
     - title: Java
-      logo: https://ih1.redbubble.net/image.938933220.7140/flat,128x128,075,f-pad,128x128,f8f8f8.jpg
-    - title: Spring
       logo: https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png
+    - title: Spring
+      logo: https://ih1.redbubble.net/image.938933220.7140/flat,128x128,075,f-pad,128x128,f8f8f8.jpg
     - title: Hibernate
       logo: https://hibernate.org/images/hibernate_icon_whitebkg.svg
+    - title: Vue Js
+      logo: https://vuejs.org/images/logo.png
 
 portfolio:
   enable: false

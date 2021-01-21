@@ -8,7 +8,7 @@ type: "post"
 
 Defensive Copying is a term used for making objects `immutable`, so you cannot change the state of an immutable object once created.
 
-Preserving immutability is critical sometimes and there are two kind of approachs to achive, using immutable objects, or employing `defensive copying` carefully.
+Preserving immutability is critical sometimes and there are two kind of approaches to achive, using immutable objects, or employing `defensive copying` carefully.
 
 Let start the story with a simple example, suppose we're creating a period class called `Period`.
 

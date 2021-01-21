@@ -110,7 +110,7 @@ public Date end() {
 
 Now, with the new constructor and the new accessors in place, `Period` is truly immutable. No matter how malicious a programmer, there is definitely no way to violate the invariants of the `Period` (of course, without resorting to extralinguistic means, such as native methods and reflection).
 
-In our example, the `Date` is obsolete and should no longer be used in new code, use its eqivalents instead.
+In our example, the `Date` is obsolete and should no longer be used in new code, use its equivalents instead.
 
 
 ### Conclusion

@@ -1,7 +1,7 @@
 ---
 title: "Defensive Copying"
 date: 2021-01-21T12:10:45+24:00
-description: "A  use case of defensive copying with the Date class"
+description: "A  use case of defensive copying for preserving immutability"
 author: "Sajad Hayatlou"
 type: "post"
 ---

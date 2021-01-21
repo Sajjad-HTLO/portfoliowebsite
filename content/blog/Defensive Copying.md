@@ -84,7 +84,7 @@ While this may seem unnatural, it is necessary. It protects the class against ch
 
 ### Avoid using clone method for non-final objects
 
-Note that we have not use the `clone` method for copying, because the `Date` is non-final, it's not guranteed to return an objetc whose class is `java.util.Date` , it could be return an instance of an untrusted subclass. So as rule of thumb, when copying defensively, avoid using `clone` method for the mutable parameters, which their type is subclaasable by an untrusted parties.
+Note that we have not use the `clone` method for copying, because the `Date` is non-final, it's not guaranteed to return an objetc whose class is `java.util.Date` , it could be return an instance of an untrusted subclass. So as rule of thumb, when copying defensively, avoid using `clone` method for the mutable parameters, which their type is subclaasable by an untrusted parties.
 
 So, although the repaired constructor will protect the created `Period` object from being changed by outside, but the `Period` class is still vulnerable to a similiar attack:
 

@@ -60,7 +60,7 @@ end.setYear(80); // Modifies internals of p!
 
 {{< /highlight >}}
 
-If you take another look at `Period` class, you can see that we're openning a door for the client code to establish a reference to our objects' attributes (`start` and `end` in this example) and because the parameters' type is `Date` and this class is intrinsicly `mutable`, now it seems obvious to change the internals of the created object upon chaning the state of one of the parameters from outside.
+If you take another look at `Period` class, you can see that we're openning a door for the client code to establish a reference to our objects' attributes (`start` and `end` in this example) and because the parameters' type is `Date` and this class is intrinsically `mutable`, now it seems obvious to change the internals of the created object upon chaning the state of one of the parameters from outside.
 
 So now there are two kind of fixes, using equivalent immutable objects, like `Instant` or `ZonedDateTime` or employ the `Defensive Copying` when assigning the `Period`'s attributes, we'll consider the latter one in this article.
 

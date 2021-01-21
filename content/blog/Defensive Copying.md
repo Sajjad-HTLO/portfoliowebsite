@@ -108,12 +108,12 @@ public Date end() {
 }
 {{< /highlight >}}
 
-Now, with the new constructor and the new accessrors in place, `Period` is truly immutable. No matter how malicious a programmer, there is defenitely no way to voilate the invariants of the `Period` (of course, without resorting to extralinguistic means, such as native methods and reflection).
+Now, with the new constructor and the new accessors in place, `Period` is truly immutable. No matter how malicious a programmer, there is definitely no way to violate the invariants of the `Period` (of course, without resorting to extralinguistic means, such as native methods and reflection).
 
 In our example, the `Date` is obsolete and should no longer be used in new code, use its eqivalents instead.
 
 
 ### Conclusion
 
-In this article, i tried to demonstrate the importance of preserving immutability when it's a critical requirement in program and how to achive it by taking `Defensive Copying` in action. When designing an immutable class, think twice about choosing the attributes type and also avoid exposing a reference to the mutable internals of the class from the outside, either in the constructor or in accessors.
+In this article, i tried to demonstrate the importance of preserving immutability when it's a critical requirement in the program and how to achive it by taking `Defensive Copying` in action. When designing an immutable class, think twice about choosing the attributes type and also avoid exposing a reference to the mutable internals of the class from the outside, either in the constructor or in accessors.
 

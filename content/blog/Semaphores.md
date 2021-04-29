@@ -173,6 +173,7 @@ Could not acquire semaphore
 ### In Summary
 
 The Semaphore is an excellent choice when you want to control the level of concurrency.
+
 Also there is no spinning, hence no waste of resources due to no busy waiting. That is because threads intending to access the critical section are queued and could access the priority section when they are de-queued, which is done by the semaphore implementation itself, hence, unnecessary CPU time is not spent on checking if a condition is satisfied to allow the thread to access the critical section.
 
 
